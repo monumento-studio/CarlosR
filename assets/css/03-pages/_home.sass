@@ -1,0 +1,275 @@
+#home
+  background: white
+  margin: 0 auto
+  #menu
+  .contenedor
+    max-width: 1400px
+    width: 100%
+    margin: 0 auto
+    .posts
+      padding-top: 44px
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      box-sizing: border-box
+      .post
+        a
+          text-decoration: none
+          overflow: hidden
+          .img
+            width: 100%
+            height: 300px
+            position: relative
+            cursor: pointer
+            overflow: hidden
+            .overlay
+              height: 100%
+              position: absolute
+              margin-top: 100%
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              background: black
+              display: flex
+              flex-direction: column
+              justify-content: center
+              align-items: center
+              transition: all 500ms ease
+              span
+                text-align: center
+                text-transform: uppercase
+                font-size: 1.6em
+                color: white
+                padding-bottom: 15px
+                opacity: 1
+            &:hover
+              .overlay
+                margin-top: 0
+                transition: all 500ms ease
+                .overlay
+                  span
+                    opacity: 1
+        .info
+          padding: 7%
+          margin-top: 15px
+          .date
+            p
+              font-family: $source
+              font-size: 1.6em
+              color: $gris
+              float: left
+              margin-right: 20px
+          .category
+            p
+              font-family: $source
+              font-size: 1.6em
+          .title
+            margin-top: 15px
+            width: 80%
+            h2
+              font-size: 2em
+              font-family: $hk-bold
+          .description
+            margin-top: 15px
+            margin-bottom: 15px
+            p
+              font-size: 1.6em
+          .leermas
+            display: none
+            a
+              font-size: 1.6em
+              color: $gris
+              font-family: $source
+              border-bottom: solid 1px $source
+              padding-bottom: 15px
+      .lead
+        grid-column: 1/4
+        display: flex
+        align-items: center
+        a
+          width: 66.6666666667%
+          height: 500px
+          box-sizing: border-box
+          .img
+            height: 500px
+        .info
+          padding: 0 5%
+          width: 33.3333333333%
+          box-sizing: border-box
+          margin-top: 0
+          .date
+            p
+          .category
+            p
+          .title
+            width: 100%
+            h2
+              font-size: 2.4em
+          .description
+            p
+          .leermas
+            display: block
+  .videos
+    background: $gris-claro
+    width: 100%
+    margin-top: 50px
+    .overlayvideo
+      display: none
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: rgba(0,0,0, .8)
+      z-index: 1
+      .hamvideo
+        position: absolute
+        right: 25px
+        top: 25px
+        cursor: pointer
+        z-index: 2
+        .line
+          width: 25px
+          height: 2px
+          background: white
+          margin-bottom: 7px
+          position: relative
+          transition: all 300ms ease
+          &:first-child
+            transform: rotate(-45deg)
+            position: absolute
+            top: 0px
+            transition: all 300ms ease
+          &:nth-child(2)
+            transform: rotate(45deg)
+            transition: all 300ms ease
+      .video1
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+
+    .contenedor
+      max-width: 1400px
+      width: 100%
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      height: inherit
+      .video
+        padding-top: 50px
+        padding-bottom: 50px
+        .img
+          position: relative
+          cursor: pointer
+          img
+            width: 100%
+          .vervideo
+            text-decoration: none
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+            bottom: 0
+            background: black
+            transition: all 500ms ease
+            span
+              text-transform: uppercase
+              font-size: 1.6em
+              color: white
+              padding-bottom: 15px
+              opacity: 0
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+          &:hover
+            .vervideo
+              top: 0
+              transition: all 500ms ease
+              span
+                opacity: 1
+        .info
+          padding: 7%
+          .date
+            p
+              font-family: $source
+              font-size: 1.6em
+              color: $gris
+              float: left
+              margin-right: 20px
+          .category
+            p
+              font-family: $source
+              font-size: 1.6em
+          .title
+            margin-top: 15px
+            width: 80%
+            h2
+              font-size: 2em
+              font-family: $hk-bold
+
+
+@media (max-width: 820px)
+  #home
+    #menu
+    .contenedor
+      .posts
+        padding-top: 44px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        box-sizing: border-box
+        .post
+          .img
+            width: 100%
+            height: 300px
+          .info
+            padding: 3%
+            margin-top: 15px
+    .videos
+      .contenedor
+        max-width: 1400px
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr
+        height: inherit
+        .video
+          padding-top: 30px
+          padding-bottom: 30px
+          img
+            width: 100%
+          .info
+            padding: 3%
+            .date
+              p
+                font-family: $source
+                font-size: 1.6em
+                color: $gris
+                float: left
+                margin-right: 20px
+            .category
+              p
+                font-family: $source
+                font-size: 1.6em
+            .title
+              margin-top: 15px
+              width: 80%
+              h2
+                font-size: 2em
+                font-family: $hk-bold
+
+@media (max-width: 600px)
+  #home
+    #menu
+    .contenedor
+      .posts
+        padding-top: 44px
+        display: grid
+        grid-template-columns: 1fr
+        box-sizing: border-box
+    .videos
+      .contenedor
+        max-width: 1400px
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr
+        height: inherit

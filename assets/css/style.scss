@@ -1,0 +1,14 @@
+// 01-tools
+@import "01-tools/reset";
+@import "01-tools/vars";
+@import "01-tools/general";
+@import "01-tools/fonts";
+// 02-partials
+@import "02-partials/menu";
+@import "02-partials/footer";
+
+// 03-pages
+@import "03-pages/home";
+@import "03-pages/sobre-mi";
+@import "03-pages/publicaciones";
+@import "03-pages/post";
