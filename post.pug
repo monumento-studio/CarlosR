@@ -9,7 +9,7 @@ html
     #post
       include _menu.html
       .contenedor
-        .hero(style="background: url(assets/img/hero-post.jpg); background-repeat: no-repeat;")
+        .hero(style="background: url(assets/img/hero-post.jpg) center center no-repeat;")
         .blog-post.cf
           .share#share
             .social.facebook
@@ -27,7 +27,7 @@ html
           .post
             .date
               span 23.05.18
-            .cat
+            .catt
               span Finanzas
             .lead
               h2 Factores que afectan los valores del real estate
@@ -66,35 +66,42 @@ html
                 .siguiente
                   a(href="#") Siguiente Artículo
           .font#font
-            #mas
-              span A
-            #menos
-              span A
+            .fonts
+              #mas
+                span A
+              #menos
+                span A
           .articulos#articulos
             h2.tit Más artículos
             .articulo
               .date
                 span 23.05.18
-              .cat
-                span Finanzas
+              .catt
+                a(href="#")
+                  span Finanzas
               .titulo
-                h2 Invirtiendo responsablemente en bienes raíces
+                a(href="#")
+                  h2 Invirtiendo responsablemente en bienes raíces
               .barra
             .articulo
               .date
                 span 23.05.18
-              .cat
-                span Finanzas
+              .catt
+                a(href="#")
+                  span Finanzas
               .titulo
-                h2 Invirtiendo responsablemente en bienes raíces
+                a(href="#")
+                  h2 Invirtiendo responsablemente en bienes raíces
               .barra
             .articulo
               .date
                 span 23.05.18
-              .cat
-                span Finanzas
+              .catt
+                a(href="#")
+                  span Finanzas
               .titulo
-                h2 Invirtiendo responsablemente en bienes raíces
+                a(href="#")
+                  h2 Invirtiendo responsablemente en bienes raíces
               .barra
       include _footer.html
     script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")

@@ -6,8 +6,6 @@
     padding-top: 44px
     .hero
       height: 90vh
-      background-position: center
-      background-repeat: no-repeat
       background-size: cover
     .blog-post
       margin-top: 50px
@@ -34,7 +32,7 @@
         .date
           float: left
           margin-right: 20px
-        .date, .cat
+        .date, .catt
           span
             font-family: $source
             font-size: 1.6em
@@ -60,8 +58,14 @@
             margin-top: 50px
             .siguiente
               float: right
+              a
+                &:hover
+                  text-decoration: underline
             .regresar
               float: left
+              a
+                &:hover
+                  text-decoration: underline
             .siguiente, .regresar
               a
                 font-size: 1.6em
@@ -129,16 +133,26 @@
             span
               font-size: 1.5em
               font-family: $source
-          .cat
+          .catt
             color: $gris
+            a
+              color: black
+              text-decoration: none
+              &:hover
+                text-decoration: underline
             span
               font-size: 1.5em
               font-family: $source
           .titulo
             margin-top: 20px
+            a
+              color: black
+              text-decoration: none
             h2
               font-family: $hk-bold
               font-size: 1.6em
+            &:hover
+              text-decoration: underline
           .barra
             width: 100%
             height: 1px
@@ -170,7 +184,7 @@
               span
                 font-size: 1.5em
                 font-family: $source
-            .cat
+            .catt
               color: $gris
               span
                 font-size: 1.5em
@@ -184,7 +198,7 @@
               width: 100%
               height: 1px
               background: black
-              margin-top: 50px
+              margin-top: 20px
     #footer
 @media (max-width: 620px)
   #post
@@ -198,22 +212,28 @@
         height: 100%
         position: relative
         .share
+          background: white
+          height: 60px
+          width: 100%
+          box-sizing: border-box
           grid-area: share
-          position: absolute
-          top: 0
-          left: 10px
-          margin: 0  auto !important
+          display: block
+          top: 53px !important
+          left: 0 !important
+          position: -webkit-sticky
+          position: sticky
+          top: 120px
           .social
-            margin-right: 10px
+            margin-left: 15px
             display: inline-block
 
             a
               img
                 max-width: 30px
                 width: 100%
-                margin: 0 auto 15px auto
+                margin: 15px auto 0 auto !important
         .post
-          margin-top: 60px
+          margin-top: 100px
           grid-area: post
           .date
             padding-left: 10px
@@ -263,47 +283,49 @@
                   text-decoration: none
                   text-transform: uppercase
         .font
-          grid-area: font
-          display: block
-          margin: 0
-          text-align: center
+          box-sizing: border-box
+          z-index: 3
           position: absolute
-          top: 0
           right: 10px
-          #mas
-            padding: 10px
-            border: solid 1px black
-            border-radius: 50%
-            width: 10px
-            height: 10px
-            position: relative
-            cursor: pointer
-            display: inline-block
-            margin-right: 10px
-            span
-              position: absolute
-              top: 50%
-              left: 50%
-              transform: translate(-50%, -50%)
-              font-size: 1.5em
-              font-family: $hk-bold
-          #menos
-            display: inline-block
-            margin-top: 10px
-            padding: 10px
-            border: solid 1px black
-            border-radius: 100%
-            width: 10px
-            height: 10px
-            position: relative
-            cursor: pointer
-            span
-              position: absolute
-              top: 50%
-              left: 50%
-              transform: translate(-50%, -50%)
-              font-size: 1em
-              font-family: $hk-bold
+          top: 0px
+          height: 100%
+          .fonts
+            position: -webkit-sticky
+            position: sticky
+            height: 20vh
+            top: 55px
+            #mas
+              top: 0px
+              padding: 10px
+              border: solid 1px black
+              border-radius: 50%
+              width: 10px
+              height: 10px
+              display: inline-block
+              margin-right: 10px
+              span
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                font-size: 1.5em
+                font-family: $hk-bold
+            #menos
+              top: 0px
+              padding: 10px
+              border: solid 1px black
+              border-radius: 50%
+              width: 10px
+              height: 10px
+              display: inline-block
+              margin-right: 10px
+              span
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                font-size: 1em
+                font-family: $hk-bold
         .articulos
           display: block !important
           height: inherit
@@ -326,7 +348,7 @@
               span
                 font-size: 1.5em
                 font-family: $source
-            .cat
+            .catt
               color: $gris
               span
                 font-size: 1.5em
@@ -340,4 +362,4 @@
               width: 100%
               height: 1px
               background: black
-              margin-top: 50px
+              margin-top: 20px
